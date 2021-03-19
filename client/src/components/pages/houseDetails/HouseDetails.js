@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useHistory, Link } from 'react-router-dom'
+import React, { useEffect } from 'react';
+import { useParams, useHistory } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import { useSelector, useDispatch } from 'react-redux'
@@ -16,7 +16,7 @@ const HouseDetails = () => {
     useEffect(() => {
         const getHouseDetails = () => dispatch(getProductDetails(params.id))
         getHouseDetails()
-    }, [])
+    }, [dispatch, params.id])
 
     function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");

@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Form, Container, Row, Col, Button } from 'react-bootstrap'
-import { useHistory, useParams, Link } from 'react-router-dom'
-import HouseService from '../../../service/house.service'
+import React, { useState } from 'react';
+import { useHistory, Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { editProduct } from './../../../actions/housesActions'
 
-const houseService = new HouseService()
+import { Form, Container, Row, Col, Button } from 'react-bootstrap'
+
 
 const NewHouseForm = () => {
 
     const history = useHistory()
-    const params = useParams()
     const dispatch = useDispatch()
 
     //Obtener toda la información de la casa

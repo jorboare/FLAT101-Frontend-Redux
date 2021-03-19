@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import HouseService from '../../../service/house.service'
 import HouseCard from './../houseCard/HouseCard'
 import { Container, Row } from 'react-bootstrap'
 
@@ -16,7 +15,7 @@ const ProductsList = () => {
     useEffect(() => {
         const products = () => dispatch(getProducts())
         products()
-    }, [])
+    }, [dispatch])
 
     const allHouses = useSelector(state => state.houses.products)
 

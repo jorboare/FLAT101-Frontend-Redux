@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Form, Container, Row, Col, Button } from 'react-bootstrap'
 import { useHistory, Link } from 'react-router-dom'
-import HouseService from '../../../service/house.service'
 import { useDispatch } from 'react-redux'
 import { addProduct } from './../../../actions/housesActions'
 
-const houseService = new HouseService()
 
 const EditHouseForm = (props) => {
 
